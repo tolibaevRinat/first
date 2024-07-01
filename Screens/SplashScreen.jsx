@@ -5,7 +5,7 @@ import { View, Text, StyleSheet, Image } from 'react-native';
 export default function Home({ navigation }) {
   return (
     <View style={styles.root}>
-      <Image source={require('../assets/logo.png')} style={styles.image} />
+      <Image source={require('../assets/192x192.png')} style={styles.image} />
       <Text style={styles.title}>O‘ZBEKISTON RESPUBLIKASINING QONUNI</Text>
       <View style={styles.wrapper}>
         <Text style={styles.subtitle}>DAVLAT FUQAROLIK XIZMATI TO‘G‘RISIDA</Text>
