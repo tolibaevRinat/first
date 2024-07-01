@@ -84,8 +84,8 @@ import SixtyFourth from './Screens/Sections/SixtyFourth';
 
 const Stack = createNativeStackNavigator();
 
-const CustomHeaderTitle = () => {
-  return <Text style={styles.headerTitle}>DAVLAT FUQAROLIK XIZMATI TO‘G‘RISIDA </Text>;
+const CustomHeaderTitle = ({ title }) => {
+  return <Text style={styles.headerTitle}>{title}</Text>;
 };
 
 export const Navigation = () => (
@@ -94,12 +94,16 @@ export const Navigation = () => (
       <Stack.Screen
         name="Home"
         component={Home}
-        options={{ headerTitle: () => <CustomHeaderTitle /> }}
+        options={{
+          headerTitle: () => <CustomHeaderTitle title={'DAVLAT FUQAROLIK XIZMATI TO‘G‘RISIDA'} />,
+        }}
       />
       <Stack.Screen
         name="FirstHead"
         component={FirstHead}
-        options={{ title: '1-Bob. Umumiy qoidalar' }}
+        options={{
+          headerTitle: () => <CustomHeaderTitle title={'1-Bob. Umumiy qoidalar'} />,
+        }}
       />
       <Stack.Screen
         name="SecendHead"
@@ -162,7 +166,14 @@ export const Navigation = () => (
       <Stack.Screen
         name="Secend"
         component={Secend}
-        options={{ title: '2-modda. Davlat fuqarolik xizmati to‘g‘risidagi qonunchilik' }}
+        options={{
+          headerTitle: () => (
+            <CustomHeaderTitle
+              title={`2-modda. Davlat fuqarolik xizmati
+to‘g‘risidagi qonunchilik`}
+            />
+          ),
+        }}
       />
       <Stack.Screen
         name="Third"
@@ -614,6 +625,7 @@ export const Navigation = () => (
 
 const styles = StyleSheet.create({
   headerTitle: {
+    paddingRight: 10,
     fontSize: 18,
     fontWeight: 'bold',
     width: '100%', // Это поможет тексту занимать всю ширину заголовка
