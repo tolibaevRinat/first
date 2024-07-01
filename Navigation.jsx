@@ -1,6 +1,8 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+import { Text, StyleSheet } from 'react-native';
+
 import Home from './Screens/HomeScreen';
 import FirstHead from './Screens/Heads/FirstHead';
 import SecendHead from './Screens/Heads/SecendHead';
@@ -82,13 +84,17 @@ import SixtyFourth from './Screens/Sections/SixtyFourth';
 
 const Stack = createNativeStackNavigator();
 
+const CustomHeaderTitle = () => {
+  return <Text style={styles.headerTitle}>DAVLAT FUQAROLIK XIZMATI TO‘G‘RISIDA </Text>;
+};
+
 export const Navigation = () => (
   <NavigationContainer>
     <Stack.Navigator initialRouteName="Home">
       <Stack.Screen
         name="Home"
         component={Home}
-        options={{ title: 'DAVLAT FUQAROLIK XIZMATI TO‘G‘RISIDA' }}
+        options={{ headerTitle: () => <CustomHeaderTitle /> }}
       />
       <Stack.Screen
         name="FirstHead"
@@ -605,3 +611,11 @@ export const Navigation = () => (
     </Stack.Navigator>
   </NavigationContainer>
 );
+
+const styles = StyleSheet.create({
+  headerTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    width: '100%', // Это поможет тексту занимать всю ширину заголовка
+  },
+});
