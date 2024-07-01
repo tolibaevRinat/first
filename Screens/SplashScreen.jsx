@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     padding: 15,
   },
   title: {
-    fontSize: 36,
+    fontSize: 30,
     textAlign: 'center',
     fontFamily: 'Times-New-Roman',
     marginBottom: 20,

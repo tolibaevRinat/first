@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "asd",
-    "slug": "asd",
+    "name": "davlat-fuqorolik-xizmati-togrisida",
+    "slug": "davlat-fuqorolik-xizmati-togrisida",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/logo.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
@@ -16,15 +16,24 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/logo.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.tolrin.davlatfuqorolikxizmatitogrisida"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
       "expo-router"
-    ]
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "ece53340-0a39-4571-a654-e15899941c5c"
+      }
+    }
   }
 }

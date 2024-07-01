@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView, Image } from 'react-native';
 
 export default function Home({ navigation }) {
   const buttons = [
@@ -23,6 +23,7 @@ export default function Home({ navigation }) {
   ];
   return (
     <View style={styles.root}>
+      <Image source={require('../assets/bg.jpg')} style={styles.image} />
       <ScrollView contentContainerStyle={styles.scrollContainer}>
         {buttons.map((btn, index) => (
           <TouchableOpacity key={index} onPress={() => navigation.navigate(btn.to)}>
@@ -39,11 +40,19 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 15,
+    position: 'relative',
+  },
+  image: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
   },
   scrollContainer: {
     alignItems: 'stratch',
     gap: 20,
+    padding: 15,
   },
   btn: {
     fontSize: 20,

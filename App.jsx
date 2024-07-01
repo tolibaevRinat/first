@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, ActivityIndicator } from 'react-native';
+import { ActivityIndicator } from 'react-native';
 import * as Font from 'expo-font';
 import { Navigation } from './Navigation';
 
